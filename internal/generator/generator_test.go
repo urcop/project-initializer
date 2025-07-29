@@ -17,7 +17,7 @@ func TestNew(t *testing.T) {
 	generator := New(projectPath)
 
 	if generator == nil {
-		t.Error("Generator should not be nil")
+		t.Fatal("Generator should not be nil")
 	}
 
 	if generator.projectPath != projectPath {
