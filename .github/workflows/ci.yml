@@ -68,5 +68,5 @@ jobs:
     - name: Test generated project
       run: |
         cd test-project
-        go mod download
+        go mod tidy
         go build -o main cmd/main.go 
