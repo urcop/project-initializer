@@ -31,7 +31,7 @@
 go install github.com/urcop/project-initializer@latest
 
 # Или установка конкретной версии
-go install github.com/urcop/project-initializer@v1.0.0
+go install github.com/urcop/project-initializer@v1.2.0
 ```
 
 После установки команда `project-initializer` будет доступна глобально:
