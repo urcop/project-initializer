@@ -4,7 +4,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var Version = "1.0.0"
+var Version = "1.0.1"
 
 var rootCmd = &cobra.Command{
 	Use:   "project-initializer",
