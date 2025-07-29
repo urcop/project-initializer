@@ -63,12 +63,7 @@ jobs:
 
     - name: Test CLI generation
       run: |
-        ./project-initializer init test-project << EOF
-        github.com/test/test-project
-        Gin
-        Без БД
-        n
-        EOF
+        ./project-initializer init test-project --module="github.com/test/test-project" --framework="Gin" --database="Без БД" --grpc=false
 
     - name: Test generated project
       run: |

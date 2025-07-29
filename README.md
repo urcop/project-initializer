@@ -79,6 +79,8 @@ brew install project-initializer
 
 ### Создание нового микросервиса
 
+#### Интерактивный режим
+
 ```bash
 project-initializer init
 ```
@@ -88,6 +90,22 @@ project-initializer init
 ```bash
 project-initializer init my-service
 ```
+
+#### Неинтерактивный режим (для CI/CD)
+
+```bash
+project-initializer init my-service \
+  --module="github.com/mycompany/my-service" \
+  --framework="Gin" \
+  --database="PostgreSQL" \
+  --grpc=true
+```
+
+**Доступные опции:**
+- `--module` - Go module name (обязательно)
+- `--framework` - Веб-фреймворк: `Gin`, `Fiber`, `Echo`
+- `--database` - База данных: `PostgreSQL`, `MySQL`, `MongoDB`, `In-Memory`, `Без БД`
+- `--grpc` - Включить gRPC сервер: `true`/`false`
 
 ### Интерактивные вопросы
 
