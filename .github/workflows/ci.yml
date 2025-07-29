@@ -69,4 +69,17 @@ jobs:
       run: |
         cd test-project
         go mod tidy
-        go build -o main cmd/main.go 
+        go build -o main cmd/main.go
+        
+    - name: Verify project structure
+      run: |
+        cd test-project
+        # Проверяем что основные файлы созданы
+        test -f go.mod || exit 1
+        test -f go.sum || exit 1
+        test -f Makefile || exit 1
+        test -f Dockerfile || exit 1
+        test -f config.yaml || exit 1
+        test -d internal/handlers || exit 1
+        test -d pkg/logger || exit 1
+        echo "✅ Структура проекта корректна" 
